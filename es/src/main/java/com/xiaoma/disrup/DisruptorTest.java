@@ -1,4 +1,4 @@
-package com.disrup;
+package com.xiaoma.disrup;
 
 import com.lmax.disruptor.RingBuffer;
 import com.lmax.disruptor.dsl.Disruptor;
