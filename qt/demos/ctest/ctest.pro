@@ -12,4 +12,5 @@ TEMPLATE = app
 SOURCES += main.cpp
 
 HEADERS += \
-    arraypoint.h
+    arraypoint.h \
+    templatetest.h
