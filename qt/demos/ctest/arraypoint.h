@@ -15,7 +15,7 @@ public :
 
 };
 
-void ArrayPoint::test() {
+void ArrayPoint::test( ) {
     char ch[3][4] = { "AAA","BB","CCC" }, ( * q )[4] = ch, *p;
     int i;
     p = new char;

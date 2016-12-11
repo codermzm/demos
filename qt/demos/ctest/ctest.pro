@@ -13,4 +13,5 @@ SOURCES += main.cpp
 
 HEADERS += \
     arraypoint.h \
-    templatetest.h
+    templatetest.h \
+    objectpointer.h

@@ -4,6 +4,7 @@
 
 #include "arraypoint.h"
 #include "templatetest.h"
+#include "objectpointer.h"
 
 using namespace std;
 int main(int argc, char *argv[])
@@ -14,6 +15,8 @@ int main(int argc, char *argv[])
     /**
      * 数组指针
      */
+    
+    /*
     ArrayPoint *arrayPoint = new ArrayPoint;
     arrayPoint->test( );
 
@@ -26,6 +29,17 @@ int main(int argc, char *argv[])
     cout << "char1 -> " << char1 << ",char2 -> " << char2 << endl;
     
     cout << "execution is done" << endl;
+    */
     
-    return a.exec();
+    
+    /**
+     * 对象指针
+     **/
+   objectpoint_exe( );
+    
+    
+    
+    
+    
+    return a.exec( );
 }
