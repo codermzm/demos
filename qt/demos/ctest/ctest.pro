@@ -1,6 +1,8 @@
 QT += core
 QT -= gui
 
+DESTDIR += ../bin
+
 CONFIG += c++11
 
 TARGET = ctest
@@ -9,9 +11,8 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += sources/main.cpp
 
-HEADERS += \
-    arraypoint.h \
-    templatetest.h \
-    objectpointer.h
+HEADERS += include/arraypoint.h\
+           include/objectpointer.h\
+           include/templatetest.h

@@ -2,9 +2,9 @@
 #include <iostream>
 #include <QTextCodec>
 
-#include "arraypoint.h"
-#include "templatetest.h"
-#include "objectpointer.h"
+#include "include/arraypoint.h"
+#include "include/templatetest.h"
+#include "include/objectpointer.h"
 
 using namespace std;
 int main(int argc, char *argv[])
