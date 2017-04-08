@@ -4,9 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network sql xml widgets
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 5): QT += widgets
 
 TARGET = transfer
 TEMPLATE = app
@@ -25,9 +25,36 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp\
-        control/QRoundProgressBar.cpp
+        control/QRoundProgressBar.cpp\
+        common/HttpFun.cpp \
+        common/localstorage.cpp \
+        common/ReqHistory.cpp
 
 HEADERS  += mainwindow.h\
-            control/QRoundProgressBar.h
+            control/QRoundProgressBar.h\
+            common/HttpFun.h \
+            common/localstorage.h \
+            common/ReqHistory.h
 
 FORMS    += mainwindow.ui
+
+win32 {
+    src_dir = $$PWD\lib\*.*
+    CONFIG(debug, debug|release) {
+        dst_dir = $$OUT_PWD\\debug\\
+    } else {
+        dst_dir = $$OUT_PWD\\release\\
+    }
+
+    # dst_dir 最后的 \\ 是必须的，用来标示 xcopy 到一个文件夹，若不存在，创建之
+
+    # Replace slashes in paths with backslashes for Windows
+    src_dir ~= s,/,\\,g
+    dst_dir ~= s,/,\\,g
+
+    !exists($$dst_dir):system(xcopy $$src_dir $$dst_dir /y /e)
+}
+
+RESOURCES += \
+    imgs.qrc
+
