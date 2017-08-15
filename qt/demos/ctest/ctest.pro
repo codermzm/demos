@@ -11,8 +11,10 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES += sources/main.cpp
+SOURCES += sources/main.cpp \
+    include/avltree.cpp
 
 HEADERS += include/arraypoint.h\
            include/objectpointer.h\
-           include/templatetest.h
+           include/templatetest.h \
+    include/avltree.h
